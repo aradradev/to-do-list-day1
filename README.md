@@ -124,7 +124,13 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- N/A
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Styling**
+- [ ] **Animation**
+- [ ] **Bundler**
+- [ ] **Date**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
