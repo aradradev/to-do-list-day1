@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <main>
-        <h1>Today's to do</h1>
+        
         <form id="task-form">
+            <section class="header">
+                <div>Today's to do</div>
+                <div><i class="ri-loop-left-line"></i></div>
+            </section>
             <input type="text" id="task-input" placeholder="Enter a task" required>
-            <button id="add-task-btn" type="submit">Add</button>
+            <button id="add-task-btn" type="submit"><i class="ri-corner-down-left-line"></i></button>
+            <ul id="todo-list"></ul>
         </form>
-        <ul id="todo-list"></ul>
     </main>
 
     <script type="module" src="../dist/main.js"></script>
