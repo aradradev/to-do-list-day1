@@ -38,8 +38,19 @@ const renderTodoList = () => {
       }
     });
 
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-btn');
+    deleteButton.innerHTML = '<i class="ri-delete-bin-line"></i>';
+
+    deleteButton.addEventListener('click', () => {
+      tasks.splice(index, 1);
+      updateLocalStorage();
+      renderTodoList();
+    });
+
     listItem.appendChild(checkbox);
     listItem.appendChild(input);
+    listItem.appendChild(deleteButton);
 
     if (task.completed) {
       listItem.classList.add('completed');
