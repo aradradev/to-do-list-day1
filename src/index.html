@@ -10,12 +10,16 @@
 </head>
 <body>
     <main>
-        <h1>Today's to do</h1>
+        
         <form id="task-form">
+            <section class="header">
+                <div>Today's to do</div>
+                <div><i class="ri-loop-left-line"></i></div>
+            </section>
             <input type="text" id="task-input" placeholder="Enter a task" required>
-            <button id="add-task-btn" type="submit">Add</button>
+            <button id="add-task-btn" type="submit"><i class="ri-corner-down-left-line"></i></button>
+            <ul id="todo-list"></ul>
         </form>
-        <ul id="todo-list"></ul>
     </main>
 
     <script type="module" src="../dist/main.js"></script>

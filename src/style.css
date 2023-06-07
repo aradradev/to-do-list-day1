@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@ body {
   display: flex;
   background: #fff;
   font-size: 20px;
+  font-family: 'DM Sans', sans-serif;
   align-items: flex-start;
+  justify-content: center;
 }
 
 main {
@@ -19,6 +23,20 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 1.2rem auto;
+  border-bottom: 1px solid #ccc;
+  padding: 1.2rem;
+
+  /* min-width: 100%; */
+  background: bisque;
 }
 
 .completed {
@@ -33,6 +51,14 @@ input[type='checkbox'] {
   transition: 0.5s;
 }
 
+#task-form {
+  margin: 1.2rem auto;
+  padding: 1.2rem;
+  min-width: 100%;
+  border-bottom: 1px solid #ccc;
+  background: bisque;
+}
+
 #task-form input {
   font-size: 1.2rem;
   padding: 0.5rem;
@@ -42,8 +68,7 @@ input[type='checkbox'] {
 }
 
 #add-task-btn {
-  background: #000;
-  color: #fff;
+  color: #000;
   border: none;
   font-size: 1.2rem;
   padding: 0.5rem 1.4rem;

@@ -9,6 +9,7 @@ const renderTodoList = () => {
   tasks.forEach((task, index) => {
     const listItem = document.createElement('li');
     listItem.setAttribute('data-index', index);
+    
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -34,12 +35,19 @@ const renderTodoList = () => {
       }
     });
 
+    
+
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-btn');
     deleteButton.innerHTML = '<i class="ri-delete-bin-line"></i>';
 
     deleteButton.addEventListener('click', () => {
       tasks.splice(index, 1);
+
+      //update the indices of the remaining tasks
+      tasks.forEach((task, newIndex) => {
+        task.index = newIndex + 1;
+      })
       updateLocalStorage();
       renderTodoList();
     });
