@@ -1,7 +1,7 @@
 import updateLocalStorage from './updateLocalStorage.js';
 
 export const tasks = [];
-
+  
 const renderTodoList = () => {
   const todoListElement = document.getElementById('todo-list');
   todoListElement.innerHTML = '';
