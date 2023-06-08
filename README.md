@@ -8,24 +8,26 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Today's To do\] ](#-todays-to-do-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🔭 Future Features ](#-future-features--1)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 [Today's To do] <a name="about-project"></a>
 
@@ -39,9 +41,9 @@ Is simple webpack which can be used as a starting point in projects
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">JS</a></li>
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
+    <li><a href="#">JS</a></li>
   </ul>
 </details>
 
@@ -57,7 +59,7 @@ Is simple webpack which can be used as a starting point in projects
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- comming soon
+-[Live here](https://aradradev.github.io/to-do-list-day1/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,13 +102,16 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-- npx stylelint "\*_/_.{css,scss}"
-- npx hint .
-- npx eslint .
+- npm install webpack webpack-cli --save-dev 
+- npm install webpack webpack-cli html-webpack-plugin style-loader css-loader --save-dev"
+- npm install css-loader style-loader
+- npm install html-webpack-plugin 
+- npm run build
+- npm start
 
 ### Deployment
 
-- not deployed
+- npm start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +121,7 @@ To run tests, run the following command:
 
 👤 **Jalloh**
 
-- GitHub: [@aradradev](https://github.com/aradra)
+- GitHub: [@aradradev](https://github.com/aradradev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
