@@ -1,4 +1,5 @@
 import updateLocalStorage from './updateLocalStorage.js';
+import { handleDragEnter, handleDragOver, handleDragStart, handleDrop, handleDragEnd, handleDragLeave } from './dragAndDrop.js';
 
 export const tasks = [];
   
@@ -9,10 +10,13 @@ const renderTodoList = () => {
   tasks.forEach((task, index) => {
     const listItem = document.createElement('li');
     listItem.setAttribute('data-index', index);
+
+    listItem.setAttribute('draggable', true);
     
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.classList.add('checkedBtn')
     checkbox.checked = task.completed;
     checkbox.addEventListener('change', () => {
       task.completed = checkbox.checked;
@@ -44,7 +48,7 @@ const renderTodoList = () => {
     deleteButton.addEventListener('click', () => {
       tasks.splice(index, 1);
 
-      //update the indices of the remaining tasks
+      //update the index of the remaining tasks
       tasks.forEach((task, newIndex) => {
         task.index = newIndex + 1;
       })
@@ -66,6 +70,9 @@ const renderTodoList = () => {
     e.preventDefault();
     const filteredTasks = tasks.filter((task) => !task.completed);
     tasks.splice(0, tasks.length, ...filteredTasks);
+    tasks.forEach((task, newIndex) => {
+      task.index = newIndex + 1;
+    })
     updateLocalStorage();
     renderTodoList();
   };
@@ -76,6 +83,16 @@ const renderTodoList = () => {
   clearCompleted.href = '#';
   clearCompleted.addEventListener('click', clearCompletedTasks);
   todoListElement.appendChild(clearCompleted);
+
+  const listItems = document.querySelectorAll('#todo-list li');
+    listItems.forEach((listItem) => {
+        listItem.addEventListener('dragstart', handleDragStart);
+        listItem.addEventListener('dragover', handleDragOver);
+        listItem.addEventListener('dragenter', handleDragEnter);
+        listItem.addEventListener('dragleave', handleDragLeave);
+        listItem.addEventListener('drop', handleDrop);
+        listItem.addEventListener('dragend', handleDragEnd);
+    })
 };
 
 export default renderTodoList;
