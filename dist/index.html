@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="style.css">
 <script defer src="main.js"></script></head>
 <body>
-    <h1>Todo list</h1>
-
-    <script src="index.js"></script>
+    <main>
+        
+        <form id="task-form">
+            <section class="header">
+                <div>Today's to do</div>
+                <div id="reload-icon"><i class="ri-loop-left-line"></i></div>
+            </section>
+            <input type="text" id="task-input" class="inputDesc" placeholder="Enter a task" required>
+            <button id="add-task-btn" class="addBtn" type="submit"><i class="ri-corner-down-left-line"></i></button>
+            <ul id="todo-list" class="listCont"></ul>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Todo App. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
