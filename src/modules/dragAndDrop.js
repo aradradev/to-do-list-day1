@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import renderTodoList, { tasks } from './renderTodoList.js';
 import updateLocalStorage from './updateLocalStorage.js';
 
@@ -28,7 +29,7 @@ export const handleDragLeave = (e) => {
 
 export const swapTasks = (oldIndex, newIndex) => {
   const temp = tasks[oldIndex];
-  tasks[oldIndex] = tasks[newIndex]
+  tasks[oldIndex] = tasks[newIndex];
   tasks[newIndex] = temp;
 //   renderTodoList()
 };
@@ -56,4 +57,3 @@ export const handleDragEnd = (e) => {
     listItem.classList.remove('dragover');
   });
 };
-
