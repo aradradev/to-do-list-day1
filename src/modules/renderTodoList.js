@@ -82,11 +82,11 @@ const renderTodoList = () => {
   clearCompleted.addEventListener('click', clearCompletedTasks);
   todoListElement.appendChild(clearCompleted);
 
-  // if (tasks.length === 0) {
-  //   clearCompleted.style.display = 'none;'
-  // } else {
-  //   clearCompleted.style.display = 'block'
-  // }
+  if (tasks.length === 0) {
+    clearCompleted.style.display = 'none;'
+  } else {
+    clearCompleted.style.display = 'block'
+  }
 
   const listItems = document.querySelectorAll('#todo-list li');
     listItems.forEach((listItem) => {
