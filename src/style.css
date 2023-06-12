@@ -1,17 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
   --bg-gradient: linear-gradient(to right, #fff, #e9993d, #ec2c2c);
-  --sec: #bbd6b8;
-  --main: #dbe4c6;
-  --third: #989898;
-  --fourth: #94af9f;
-  --text: #000;
+  --white-dark: #dbe4c6;
+  --red: #ec2c2c;
+  --black: #000;
 }
 
 body {
-  background-color: var(--fourth);
-  font-family: "Karla", sans-serif;
+  background-color: var(--bg-gradient);
+  font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +36,7 @@ main {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--sec);
-  color: var(--text);
+  color: var(--black);
   font-weight: 600;
 }
 
@@ -56,7 +54,7 @@ main {
 }
 
 #reload-icon i:not(.enter):hover {
-  color: var(--text);
+  color: var(--black);
 }
 
 ul {
@@ -71,7 +69,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border-bottom: 1px solid var(--sec);
+  border-bottom: 1px solid var(--white-dark);
   font-size: 14px;
 }
 
@@ -103,12 +101,24 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-color: var(--fourth);
+  background-color: var(--bg-gradient);
+}
+
+button {
+  cursor: pointer;
+}
+
+.clear-items {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.9rem 3.3rem;
+  cursor: pointer;
 }
 
 footer .clear-items {
   outline: none;
-  color: var(--main);
+  color: var(--white-dark);
   border: none;
   background: inherit;
   line-height: 1.5rem;
@@ -118,7 +128,7 @@ footer .clear-items {
 
 .completed {
   transition: opacity 0.3s ease-in-out;
-  text-decoration: line-through var(--text);
+  text-decoration: line-through var(--black);
   color: gray;
 }
 
@@ -127,41 +137,21 @@ footer .clear-items {
 }
 
 .task-item:hover {
-  background-color: var(--sec);
+  background-color: #dbe4c6;
 }
 
 .checkedBtn {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 2px solid transparent; /* Hide the square border */
-  background-color: var(--fourth);
+  border: 2px solid transparent;
   position: relative;
   cursor: pointer;
   outline: none;
 }
 
 .checkedBtn:checked {
-  background-color: var(--fourth);
-}
-
-.checkedBtn::after {
-  content: "\2713"; /* Checkmark character */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  color: var(--text);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0; /* Initially hide the checkmark */
-}
-
-.checkedBtn:checked::after {
-  opacity: 1;
+  background-color: var(--black);
 }
 
 .inputDesc {
@@ -169,13 +159,13 @@ footer .clear-items {
   outline: none;
   background-color: transparent;
   font-size: 16px;
-  color: var(--text);
+  color: var(--black);
   padding: 2px;
 }
 
 @media screen and (min-width: 768px) {
   .listCont {
-    background-color: var(--main);
+    background-color: var(--white-dark);
     min-width: 50%;
     box-shadow:
       0 10px 15px -3px rgba(0, 0, 0, 0.1),

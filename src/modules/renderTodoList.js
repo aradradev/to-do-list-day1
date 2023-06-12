@@ -12,7 +12,6 @@ const renderTodoList = () => {
     listItem.setAttribute('data-index', index);
 
     listItem.setAttribute('draggable', true);
-    
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -77,12 +76,17 @@ const renderTodoList = () => {
     renderTodoList();
   };
 
-  const clearCompleted = document.createElement('a');
+  const clearCompleted = document.createElement('button');
   clearCompleted.classList.add('clear-items');
   clearCompleted.textContent = 'Clear All Completed';
-  clearCompleted.href = '#';
   clearCompleted.addEventListener('click', clearCompletedTasks);
   todoListElement.appendChild(clearCompleted);
+
+  // if (tasks.length === 0) {
+  //   clearCompleted.style.display = 'none;'
+  // } else {
+  //   clearCompleted.style.display = 'block'
+  // }
 
   const listItems = document.querySelectorAll('#todo-list li');
     listItems.forEach((listItem) => {
